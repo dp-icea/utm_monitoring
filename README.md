@@ -13,8 +13,6 @@ USS Qualifier is a test suite for validation of an USS  compliant with ASTM guid
     
 
     If you don't, you can download it from [here](https://www.python.org/downloads/)
-
-
 - Must have git installed 
 
     If you don't, you can download it from [here](https://www.git-scm.com/downloads)
@@ -36,8 +34,14 @@ Configure env file with mandatory variables
     ---
 
 ### How to
-In utm_monitoring directory,
+
+This repository has a git submodule so after cloning it you must execute 
+```
+    git submodule update --init
+```
+
+To execute test suite, run in utm_monitoring directory:
 
 ```
-python3 main.py
+    python3 main.py
 ```
