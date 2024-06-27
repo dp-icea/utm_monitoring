@@ -5,7 +5,6 @@ from config_file_parser import ConfigFileParser
 
 load_dotenv()
 
-QUALIFIER_ENV_CONFIG_PATH = os.getenv('QUALIFIER_ENV_CONFIG_PATH')
 DEV_CONFIG_PATH = os.getenv('DEV_CONFIG_PATH')
 DSS_URL = os.getenv('DSS_URL')
 AUTH_URL = os.getenv('AUTH_SERVICE_URL')
