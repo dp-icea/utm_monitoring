@@ -29,7 +29,7 @@ Configure env file with mandatory variables
     **NOTE**
     ⚠️ 
 
-    For BR UTM second forum, we will only use the f3548_self_contained test plan.
+    For BR UTM second forum, we will only use the configurations.f3548_self_contained test plan.
 
     ---
 
