@@ -6,7 +6,7 @@ from config_file_parser import ConfigFileParser
 load_dotenv()
 
 DSS_URL = os.getenv('DSS_URL')
-USS_PROVIDER_URL = os.getenv('USS_PROVIDER')
+USS_PROVIDER_URL = os.getenv('USS_PROVIDER_URL')
 TEST_PLAN_NAME = os.getenv('TEST_PLAN')
 
 os.chdir('..')
