@@ -16,10 +16,10 @@ os.chdir(current_path + QUALIFIER_DIR_PATH + QUALIFIER_TEST_PLANS_CONFIG_PATH)
 
 test_plan_name = TEST_PLAN_NAME.split('.')[-1]
 test_plan_file_parser = ConfigFileParser(test_plan_name + YAML_EXTENSION_STR)
-test_plan_file_str = test_plan_file_parser.readFile()
+test_plan_file_str = test_plan_file_parser.read_file()
 
-test_plan_file_str = test_plan_file_parser.updateFileContent(DSS_BASE_URL_PATTERN, DSS_URL, test_plan_file_str)
-test_plan_file_str = test_plan_file_parser.updateFileContent(USS_BASE_URL_PATTERN, USS_PROVIDER_URL,test_plan_file_str )
-updated_test_plan_file_str = test_plan_file_parser.updateFileContent(USS_LOG_BASE_URL_PATTERN, USS_PROVIDER_URL, test_plan_file_str)
+test_plan_file_str = test_plan_file_parser.update_file_content(DSS_BASE_URL_PATTERN, DSS_URL, test_plan_file_str)
+test_plan_file_str = test_plan_file_parser.update_file_content(USS_BASE_URL_PATTERN, USS_PROVIDER_URL,test_plan_file_str )
+updated_test_plan_file_str = test_plan_file_parser.update_file_content(USS_LOG_BASE_URL_PATTERN, USS_PROVIDER_URL, test_plan_file_str)
 
-test_plan_file_parser.writeFile(updated_test_plan_file_str)
+test_plan_file_parser.write_file(updated_test_plan_file_str)

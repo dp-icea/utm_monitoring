@@ -11,24 +11,24 @@ USS_PROVIDER_URL = os.getenv('USS_PROVIDER_URL')
 AUTH_SERVICE_URL = os.getenv('AUTH_SERVICE_URL')
 
 os.chdir('..')
-currentPath = os.getcwd()
+current_path = os.getcwd()
 
-os.chdir(currentPath + QUALIFIER_DIR_PATH + QUALIFIER_ENV_CONFIG_PATH)
+os.chdir(current_path + QUALIFIER_DIR_PATH + QUALIFIER_ENV_CONFIG_PATH)
 
 # enviroment container config
-dockerContainerConfigParser = ConfigFileParser(ENV_CONTAINER_CONFIG_FILE)
-fileContent = dockerContainerConfigParser.readFile()
+docker_container_config_parser = ConfigFileParser(ENV_CONTAINER_CONFIG_FILE)
+file_content_str = docker_container_config_parser.read_file()
 
-updatedFileContent = dockerContainerConfigParser.updateFileContent(DSS_BASE_URL_PATTERN, DSS_URL, fileContent)
-updatedFileContentussUpd = dockerContainerConfigParser.updateFileContent(USS_BASE_URL_PATTERN, USS_PROVIDER_URL, updatedFileContent)
+env_config_str = docker_container_config_parser.update_file_content(DSS_BASE_URL_PATTERN, DSS_URL, file_content_str)
+env_config_str = docker_container_config_parser.update_file_content(USS_BASE_URL_PATTERN, USS_PROVIDER_URL, env_config_str)
 
-dockerContainerConfigParser.writeFile(updatedFileContentussUpd)
+docker_container_config_parser.write_file(env_config_str)
 
 #authorization service config
-os.chdir(currentPath + QUALIFIER_DIR_PATH)
+os.chdir(current_path + QUALIFIER_DIR_PATH)
 
-ussQualifierScriptParser = ConfigFileParser(USS_QUALIFIFER_SCRIPT_FILE)
-ussQualifierScript = ussQualifierScriptParser.readFile()
-updatedFileContent = ussQualifierScriptParser.updateFileContent(AUTH_BASE_URL,AUTH_SERVICE_URL, ussQualifierScript)
+uss_qualifier_run_script_parser = ConfigFileParser(USS_QUALIFIFER_SCRIPT_FILE)
+uss_qualifier_script_str = uss_qualifier_run_script_parser.read_file()
+updated_script_str = uss_qualifier_run_script_parser.update_file_content(AUTH_BASE_URL,AUTH_SERVICE_URL, uss_qualifier_script_str)
 
-ussQualifierScriptParser.writeFile(updatedFileContent)
+uss_qualifier_run_script_parser.write_file(updated_script_str)

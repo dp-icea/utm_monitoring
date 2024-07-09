@@ -3,14 +3,14 @@ import re
 class ConfigFileParser:
 
     def __init__(self, file):
-        self.fileName = file
+        self.file_name = file
     
-    def readFile(self):
-        return open(self.fileName, 'r').read()
+    def read_file(self):
+        return open(self.file_name, 'r').read()
 
-    def writeFile(self, content):
-        file = open(self.fileName, 'w')
+    def write_file(self, content):
+        file = open(self.file_name, 'w')
         return file.write(content)
     
-    def updateFileContent(self, pattern, content, file):
+    def update_file_content(self, pattern, content, file):
         return re.sub(pattern, content, file)
