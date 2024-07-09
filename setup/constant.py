@@ -7,7 +7,7 @@ QUALIFIER_ENV_CONFIG_PATH = "/configurations/dev/library/"
 
 SCRIPT_SETUP_PATH = "/setup"
 ENV_COMPOSE_CONFIG_SCRIPT = "test_environment_setup.py"
-TEST_PLAN_COMPOSE_CONFIG_FILE = "test_plan_setup.py"
+TEST_PLAN_COMPOSE_CONFIG_SCRIPT = "test_plan_setup.py"
 
 SUCCESS_EXIT_CODE_STR = 0
 
@@ -18,3 +18,6 @@ USS_BASE_URL_PATTERN = r'scdsc.uss[0-9] ?\.localutm'
 USS_LOG_BASE_URL_PATTERN = r'scdsc.log.uss[0-9] ?\.localutm'
 
 YAML_EXTENSION_STR = ".yaml"
+
+PYTHON3_COMMAND_LINE = 'python3'
+BASH_COMMAND_LINE = 'bash'
