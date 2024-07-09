@@ -31,7 +31,7 @@ Configure env file with following mandatory variables:
 
   **NOTE**
   ⚠️
-
+  
   - For BR-UTM third forum, use **configurations.dev.f3548_self_contained** test plan.
   - When declaring URLs in env file, please don't use http(s) prefix.
 
